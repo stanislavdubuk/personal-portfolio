@@ -1,0 +1,875 @@
+/* .dark {
+  background: #1f232a;
+} */
+
+.test,
+.test1 {
+  color: black;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(168, 168, 168);
+}
+
+/* -------------------------------------------- */
+/* -------------- GOOGLE FONTS ---------------- */
+/* -------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* -------------------------------------------- */
+/* -------------- VARIABLES CSS --------------- */
+/* -------------------------------------------- */
+:root {
+  --header-height: 3rem;
+
+  /* ---------- COLORS -------- */
+  /* Change favourite color */
+  --hue-color: 199;
+
+  /* HSL color mode */
+  /* #00abfd */
+  --first-color: hsl(var(--hue-color), 95%, 68%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 25%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+
+  /* ---------- Font and Typography ---------- */
+  --body-font: 'Roboto', sans-serif;
+
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* ---------- Font Weight ---------- */
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /* ---------- Margins Bottom ---------- */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* ---------- Z-index ---------- */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* ---------- Font size for large devices ---------- */
+@media screen and (min-width: 958px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* ------------------- BASE ------------------- */
+/* -------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  /* background: var(--clr-background); */
+  /* color: var(--clr-foreground); */
+}
+
+/* .scroll__container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+} */
+
+h1,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--first-color-alt);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------- */
+/* ---------- REUSABLE CSS CLASSES ------------ */
+/* -------------------------------------------- */
+.section {
+  padding: 2rem 0 4rem;
+  transition: transform 1s, opacity 1s;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/* .section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+} */
+
+/* -------------------------------------------- */
+/* ----------------- LAYOUT ------------------- */
+/* -------------------------------------------- */
+.container {
+  max-width: 980px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/* -------------------------------------------- */
+/* ------------------ NAV --------------------- */
+/* -------------------------------------------- */
+
+.nav {
+  /* max-width: 1200px; */
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -30%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.2rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 0.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav__close:hover {
+  color: var(--first-color-alt);
+}
+
+/* ------ SHOW MENU ------ */
+.show-menu {
+  bottom: 0;
+}
+
+/* ------ ACTIVE LINK ------ */
+.active-link {
+  color: var(--first-color);
+}
+
+/* -------------------------------------------- */
+/* ------------------ HOME -------------------- */
+/* -------------------------------------------- */
+
+.codelogo {
+  width: 550px;
+  height: auto;
+}
+
+.section.home {
+  background: url(/assets/img/waves3000final.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.home__container {
+  padding: 0 1rem;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 60vh;
+}
+.home__title {
+  font-size: var(--big-font-size);
+  color: #fff;
+}
+.home__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-75);
+}
+
+.home__description {
+  margin-bottom: var(--mb-2);
+}
+
+.home__scroll {
+  margin: 0 auto;
+  width: min-content;
+  transition: 0.2s all;
+  animation: float 1.2s infinite alternate;
+}
+
+.home__scroll-angle {
+  font-size: 4rem;
+  color: var(--body-color);
+}
+
+.home__scroll:hover {
+  transform: translateY(0.25rem);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* div {
+        -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+    }
+    @-webkit-keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    } */
+
+/* -------------------------------------------- */
+/* ----------------- BUTTONS ------------------ */
+/* -------------------------------------------- */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  font-weight: var(--font-medium);
+}
+
+.button.home {
+  background-color: #fff;
+  color: var(--title-color);
+}
+
+.button.home:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+/* -------------------------------------------- */
+/* -------------- SECTION ABOUT --------------- */
+/* -------------------------------------------- */
+
+.section.about {
+  min-height: 100vh;
+  padding: 10rem 0;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__bio {
+  width: 75%;
+  border-radius: 0.3rem;
+  border: 2px solid var(--first-color);
+  margin-right: 10rem;
+  /* height: 70vh; */
+}
+
+.about__bio--heading {
+  height: 30%;
+  text-align: center;
+  padding: 30px;
+}
+
+.about__bio--heading h2 {
+  color: var(--first-color-alt);
+  font-size: 30px;
+}
+
+.waving__hand {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.about__bio--about {
+  height: 40px;
+  background: var(--first-color-lighter);
+  width: 50%;
+  margin: 0 auto;
+  transform: translateY(40%);
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.about__bio--about h3 {
+  color: var(--title-color);
+}
+
+.about__bio--text {
+  background-image: linear-gradient(
+    to bottom,
+    var(--first-color),
+    var(--first-color-alt)
+  );
+  padding: 2rem;
+  font-weight: 400;
+  line-height: 1.65rem;
+}
+
+.about__skills {
+  text-align: center;
+  width: 50%;
+}
+
+.about__skills h2 {
+  margin-bottom: 2rem;
+}
+
+.about__skills--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin: auto;
+}
+
+.skill-icon {
+  font-size: 6rem;
+}
+
+.about__skills--item {
+  text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* -------------- SECTION PROJECTS --------------- */
+/* ----------------------------------------------- */
+
+.section.projects {
+  min-height: 100vh;
+  background: var(--first-color);
+  padding-bottom: 5rem;
+}
+
+.section.projects h2 {
+  width: max-content;
+  color: var(--body-color);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.projects__item--image {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.projects__item--image img {
+  transform: scale(95%);
+  transition: 0.2s all ease-in-out;
+}
+.projects__item--image img:hover {
+  transform: scale(100%);
+}
+
+.projects__item--heading {
+  height: 40px;
+  background: var(--first-color-lighter);
+  width: 50%;
+  margin: 0 auto;
+  transform: translateY(-40%);
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.projects__item {
+  background: var(--body-color);
+  height: 30rem;
+  width: 25rem;
+}
+
+.splide__slide {
+  padding: 3rem;
+}
+
+.splide__arrows i {
+  color: var(--body-color);
+  font-size: 50px;
+}
+
+.splide__arrows button {
+  background: transparent;
+}
+
+/* -------------------------------------------- */
+/* -------------- SECTION CONTACT --------------- */
+/* -------------------------------------------- */
+
+.section.contact {
+  height: 100vh;
+}
+
+.section.contact h2 {
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------- */
+/* ------------- DARK/LIGHT THEME ------------- */
+/* -------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-background: hsl(0 0% 0%);
+    --clr-foreground: hsl(0 0% 100%);
+  }
+}
+/* SWITCH DARK TO LIGHT AFTER DEVELOP */
+
+.dark-theme {
+  --clr-foreground: hsl(0 0% 0%);
+  --clr-background: hsl(0 0% 100%);
+}
+
+.light-theme {
+  --clr-background: hsl(0 0% 0%);
+  --clr-foreground: hsl(0 0% 100%);
+}
+
+/* SWITCH DARK TO LIGHT AFTER DEVELOP */
+
+#theme-toggle {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
+#theme-toggle svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--title-color);
+}
+
+#theme-toggle svg:hover {
+  fill: var(--first-color);
+}
+
+.light-theme #theme-toggle::before {
+  animation: pulseToLight 650ms ease-out;
+}
+
+.dark-theme #theme-toggle::before {
+  animation: pulseToDark 650ms ease-out;
+}
+
+#theme-toggle:hover::after,
+#theme-toggle:focus-visible::after {
+  opacity: 0.7;
+  transform: scale(1);
+  transition: transform 70ms linear, opacity 70ms linear;
+}
+
+.toggle-circle {
+  transition: transform 500ms ease-out;
+}
+
+.light-theme .toggle-circle {
+  transform: translateX(-15%);
+}
+
+.toggle-sun {
+  transform-origin: center center;
+  transition: transform 750ms cubic-bezier(0.11, 0.14, 0.29, 1.32);
+}
+
+.light-theme .toggle-sun {
+  transform: rotate(0.5turn);
+}
+
+@keyframes pulseToLight {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  10% {
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseToDark {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  10% {
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* -------------------------------------------- */
+/* ------------- MEDIA QUERIES ---------------- */
+/* -------------------------------------------- */
+
+/* ---- FOR SMALL DEVICES ---- */
+
+@media screen and (max-width: 768px) {
+  .nav__btns {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #theme-toggle {
+    width: 22px;
+    height: 22px;
+  }
+
+  #theme-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+  /* HOME SECTION */
+
+  .home__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home__data {
+    margin-top: 10rem;
+  }
+
+  .home__scroll {
+    margin-top: 6rem;
+  }
+
+  .home__scroll i {
+    color: var(--body-color);
+  }
+
+  .codelogo {
+    width: 80vw;
+    margin-top: 5rem;
+  }
+
+  /* ABOUT SECTION */
+
+  .section.about {
+    padding-top: 2rem;
+  }
+
+  .about__bio {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+  }
+
+  .about__skills--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* margin: auto; */
+  }
+
+  .about__skills {
+    width: auto;
+  }
+
+  /* CONTACT SECTION */
+
+  .section.contact {
+    height: 95vh;
+  }
+}
+
+/* ---- FOR MEDIUM DEVICES ---- */
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .section__subtitle {
+    margin-bottom: 4rem;
+  }
+  .header {
+    top: 0;
+    bottom: initial;
+    padding: 0 1rem;
+    position: absolute;
+    transition: 0.5s;
+    background-color: transparent;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__icon,
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__menu {
+    margin-left: auto;
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .projects__item {
+    width: 100%;
+  }
+  .splide__arrows {
+    display: none;
+  }
+
+  .splide__slide {
+    padding: 40px 10px;
+  }
+}
+
+/* FOR LARGE DEVICES */
+
+@media screen and (max-width: 1016px) {
+  /* ---- ABOUT SECTION --- */
+
+  .about__container {
+    display: grid;
+    /* margin: 0 auto; */
+  }
+  .about__bio {
+    margin-right: 0;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .about__skills {
+    margin: 0 auto;
+    width: 75%;
+  }
+}
+
+/* -------------------------------------------- */
+/* -------------- STICKY NAV ------------------ */
+/* -------------------------------------------- */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sticky {
+  position: fixed;
+  box-shadow: 0px -1px 15px -2px rgba(0, 0, 0, 0.4);
+  animation-name: fadein;
+  animation-duration: 0.2s;
+  box-shadow: 0 3px 3px rgba(219, 219, 219, 0.637);
+  background-color: var(--body-color);
+}

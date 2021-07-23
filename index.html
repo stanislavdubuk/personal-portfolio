@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -------------------- ICONS -------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- -------------------- SPLIDE -------------------- -->
+    <script defer src="assets/splide/splide.min.js"></script>
+    <link rel="stylesheet" href="/assets/splide/splide.min.css" />
+
+    <!-- -------------------- CSS -------------------- -->
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/13af1f86ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./main.js"></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- -------------------- HEADER -------------------- -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Stanislav.</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <!-- <li class="nav__item">
+              <a href="#projects" class="nav__link">
+                <i class="uil uil-box"></i> Home</a
+              >
+            </li> -->
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i> About</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">
+                <i class="uil uil-box nav__icon"></i> Projects</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-envelope nav__icon"></i> Contact</a
+              >
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <button id="theme-toggle" aria-label="Switch to dark theme">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="472.39"
+              height="472.39"
+              viewBox="0 0 472.39 472.39"
+            >
+              <g class="toggle-sun">
+                <path
+                  d="M403.21,167V69.18H305.38L236.2,0,167,69.18H69.18V167L0,236.2l69.18,69.18v97.83H167l69.18,69.18,69.18-69.18h97.83V305.38l69.18-69.18Zm-167,198.17a129,129,0,1,1,129-129A129,129,0,0,1,236.2,365.19Z"
+                />
+              </g>
+              <g class="toggle-circle">
+                <circle class="cls-1" cx="236.2" cy="236.2" r="103.78" />
+              </g>
+            </svg>
+          </button>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- -------------------- MAIN -------------------- -->
+    <main class="main">
+      <!-- -------------------- HOME -------------------- -->
+
+      <section class="section home" id="home">
+        <div class="home__container container">
+          <div class="home__content">
+            <!-- <div class="home__social">
+              <a href="#" target="_blank" class="home__social-icon"
+                ><i class="uil uil-linkedin-alt"></i
+              ></a>
+              <a href="#" target="_blank" class="home__social-icon"
+                ><i class="uil uil-dribbble"></i
+              ></a>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="home__social-icon"
+                ><i class="uil uil-github-alt"></i
+              ></a>
+            </div> -->
+            <div class="home__data">
+              <h1 class="home__title">Hi, I am Stanislav</h1>
+              <h3 class="home__subtitle">Frontend Developer</h3>
+              <p class="home__description">Experienced software engineer.</p>
+              <a href="#contact" class="button home button--flex">
+                Contact Me <i class="uil uil-envelope button__icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="codelogo">
+            <img src="./assets/img/codeThinking.svg" alt="logo" />
+          </div>
+        </div>
+        <div class="home__scroll">
+          <a href="#about" class="home__scroll-button button--flex"
+            ><i class="uil uil-angle-down home__scroll-angle"></i
+          ></a>
+        </div>
+      </section>
+      <section id="about" class="about section">
+        <div class="about__container container">
+          <div class="about__bio">
+            <div class="about__bio--heading">
+              <h2>
+                Hello <span class="waving__hand">👋🏻</span> <br />
+                I am Stanislav
+              </h2>
+            </div>
+            <div class="about__bio--about">
+              <h3>About Me</h3>
+            </div>
+            <div class="about__bio--text">
+              <p>
+                I am a front-end developer with a background in business
+                management. Trying to learn more things and get a job. Also
+                interested in snowboadring and I know English very well I'm
+                always looking to connect with new people in the world of tech,
+                whether it's an actual discussions about tech, or more about
+                memes and cars - get in touch! 🙂
+              </p>
+            </div>
+          </div>
+          <div class="about__skills">
+            <h2>THINGS I CAN DO</h2>
+            <div class="about__skills--grid">
+              <div class="about__skills--item">
+                <h4>HTML</h4>
+                <i
+                  class="fab fa-html5 skill-icon"
+                  style="color: #f16529"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
+                <h4>CSS</h4>
+                <i
+                  class="fab fa-css3-alt skill-icon"
+                  style="color: #2965f1"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
+                <h4>JavaScript</h4>
+                <i
+                  class="fab fa-js skill-icon"
+                  style="color: #f0db4f"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
+                <h4>React</h4>
+                <i
+                  class="fab fa-react skill-icon"
+                  style="color: #61dbfb"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
+                <h4>Git</h4>
+                <i
+                  class="fab fa-git-alt skill-icon"
+                  style="color: #f1502f"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
+                <h4>NPM</h4>
+                <i
+                  class="fab fa-npm skill-icon"
+                  style="color: #cc3534"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="section projects">
+        <h2>THINGS I HAVE DONE</h2>
+        <div class="projects__container container">
+          <div class="splide">
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <i class="uil uil-angle-left-b"></i>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <i class="uil uil-angle-right-b"></i>
+              </button>
+            </div>
+            <div class="splide__slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="project__container">
+                      <div class="projects__item">
+                        <div class="projects__item--image">
+                          <img
+                            src="./assets/img/roadBlock.png"
+                            alt="roadBlock"
+                          />
+                        </div>
+                        <div class="projects__item--text">
+                          <h3 class="projects__item--heading">The Rythm Box</h3>
+                          <p>
+                            E-commerce site feat. user auth, order history,
+                            reviews & product filtering/ sorting. Built with
+                            Django, SQL, Stripe payments and Sass
+                          </p>
+                          <div class="projects__item--links">
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-cloud"></i
+                            ></a>
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-github-alt"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="project__container">
+                      <div class="projects__item">
+                        <div class="projects__item--image">
+                          <img
+                            src="./assets/img/roadBlock.png"
+                            alt="roadBlock"
+                          />
+                        </div>
+                        <div class="projects__item--text">
+                          <h3 class="projects__item--heading">The Rythm Box</h3>
+                          <p>
+                            E-commerce site feat. user auth, order history,
+                            reviews & product filtering/ sorting. Built with
+                            Django, SQL, Stripe payments and Sass
+                          </p>
+                          <div class="projects__item--links">
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-cloud"></i
+                            ></a>
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-github-alt"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="project__container">
+                      <div class="projects__item">
+                        <div class="projects__item--image">
+                          <img
+                            src="./assets/img/roadBlock.png"
+                            alt="roadBlock"
+                          />
+                        </div>
+                        <div class="projects__item--text">
+                          <h3 class="projects__item--heading">The Rythm Box</h3>
+                          <p>
+                            E-commerce site feat. user auth, order history,
+                            reviews & product filtering/ sorting. Built with
+                            Django, SQL, Stripe payments and Sass
+                          </p>
+                          <div class="projects__item--links">
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-cloud"></i
+                            ></a>
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-github-alt"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="project__container">
+                      <div class="projects__item">
+                        <div class="projects__item--image">
+                          <img
+                            src="./assets/img/roadBlock.png"
+                            alt="roadBlock"
+                          />
+                        </div>
+                        <div class="projects__item--text">
+                          <h3 class="projects__item--heading">The Rythm Box</h3>
+                          <p>
+                            E-commerce site feat. user auth, order history,
+                            reviews & product filtering/ sorting. Built with
+                            Django, SQL, Stripe payments and Sass
+                          </p>
+                          <div class="projects__item--links">
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-cloud"></i
+                            ></a>
+                            <a href="#" class="projects__item--link"
+                              ><i class="uil uil-github-alt"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section contact">
+        <h2>LET'S GET IN TOUCH</h2>
+      </section>
+    </main>
+  </body>
+</html>
