@@ -404,10 +404,12 @@ img {
 }
 
 .about__bio {
-  width: 75%;
+  height: 30rem;
+  width: 30rem;
   border-radius: 0.3rem;
   border: 2px solid var(--first-color);
   margin-right: 10rem;
+
   /* height: 70vh; */
 }
 
@@ -483,6 +485,9 @@ img {
   padding: 2rem;
   font-weight: 400;
   line-height: 1.65rem;
+  height: 18.3rem;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
 }
 
 .about__skills {
@@ -526,40 +531,13 @@ img {
   margin-bottom: 1rem;
 }
 
-.projects__item--image {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  padding: 20px;
-  overflow: hidden;
-}
-
-.projects__item--image img {
-  transform: scale(95%);
-  transition: 0.2s all ease-in-out;
-}
-.projects__item--image img:hover {
-  transform: scale(100%);
-}
-
-.projects__item--heading {
-  height: 40px;
-  background: var(--first-color-lighter);
-  width: 50%;
-  margin: 0 auto;
-  transform: translateY(-40%);
-  text-align: center;
-  padding: 10px;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: var(--title-color);
-}
-
 .projects__item {
   background: var(--body-color);
   height: 30rem;
   width: 25rem;
+  margin-left: -3px;
+  border-radius: 0.3rem;
+  box-shadow: 0px 3px 15px -10px #000000;
 }
 
 .splide__slide {
@@ -575,6 +553,69 @@ img {
   background: transparent;
 }
 
+.projects__item--image {
+  position: relative;
+  width: 100%;
+  height: 50%;
+
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.projects__item--image img {
+  transform: scale(95%);
+  opacity: 0.8;
+  padding-top: 2px;
+  transition: 0.2s all ease-in-out;
+}
+.projects__item--image img:hover {
+  transform: scale(100%);
+  opacity: 1;
+  padding-top: initial;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.projects__item--heading {
+  height: 40px;
+  background: var(--first-color-lighter);
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.projects__item--text {
+  padding: 10px;
+  height: 22%;
+  line-height: 1.8rem;
+}
+
+.projects__item--links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects__item--link ion-icon {
+  width: 60px;
+  height: 60px;
+  color: var(--first-color-alt);
+  transition: 0.2s all ease-in-out;
+}
+
+.projects__item--link ion-icon:hover {
+  color: var(--first-color);
+  transform: scale(110%);
+}
+
+.projects__responsiveImage {
+  display: none;
+}
+
 /* -------------------------------------------- */
 /* -------------- SECTION CONTACT --------------- */
 /* -------------------------------------------- */
@@ -586,6 +627,51 @@ img {
 .section.contact h2 {
   width: max-content;
   margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.contact__form {
+  width: 30rem;
+  margin: 0 auto;
+  border: 1px solid var(--first-color-alt);
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+.form__fields {
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#message {
+  resize: none;
+}
+
+#name,
+#email {
+  height: 2rem;
+}
+
+#name,
+#email,
+#message {
+  padding: 5px;
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid var(--first-color-alt);
+  background: var(--input-color);
+}
+
+.button.contact {
+  border: none;
+  margin: 0 auto;
+  width: max-content;
+  cursor: pointer;
 }
 
 /* -------------------------------------------- */
@@ -769,10 +855,37 @@ img {
     width: auto;
   }
 
+  /* PROJECTS SECTION */
+
+  .projects__item {
+    height: 24rem;
+    width: 100%;
+  }
+
+  .projects__responsiveImage {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .projects__item--text {
+    line-height: 1.2rem;
+  }
+
+  .projects__item--link ion-icon {
+    width: 45px;
+    height: 45px;
+  }
+
   /* CONTACT SECTION */
 
   .section.contact {
     height: 95vh;
+  }
+
+  .contact__form {
+    width: 100%;
   }
 }
 
@@ -820,15 +933,16 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
-  .projects__item {
-    width: 100%;
-  }
   .splide__arrows {
     display: none;
   }
 
   .splide__slide {
     padding: 40px 10px;
+  }
+
+  .projects__item {
+    margin-left: initial;
   }
 }
 
@@ -848,7 +962,7 @@ img {
   }
   .about__skills {
     margin: 0 auto;
-    width: 75%;
+    /* width: 75%; */
   }
 }
 
