@@ -622,6 +622,7 @@ img {
 
 .section.contact {
   height: 100vh;
+  padding-bottom: var(--mb-1-5);
 }
 
 .section.contact h2 {
@@ -630,7 +631,71 @@ img {
   margin-bottom: 3rem;
 }
 
-.contact__form {
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact__info {
+  height: 20rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35rem;
+  height: 30rem;
+  justify-content: space-around;
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.3rem;
+  padding: 0.75rem 1rem 0.25rem;
+  width: 100%;
+}
+
+.contact__label {
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+  resize: none;
+}
+
+/* .contact__form {
   width: 30rem;
   margin: 0 auto;
   border: 1px solid var(--first-color-alt);
@@ -672,7 +737,7 @@ img {
   margin: 0 auto;
   width: max-content;
   cursor: pointer;
-}
+} */
 
 /* -------------------------------------------- */
 /* ------------- DARK/LIGHT THEME ------------- */
@@ -788,6 +853,25 @@ img {
 /* ------------- MEDIA QUERIES ---------------- */
 /* -------------------------------------------- */
 
+/* ---- FOR VERY SMALL DEVICES ---- */
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  /* HOME SECTION */
+  .codelogo {
+    margin-top: 2rem;
+  }
+  /* ABOUT SECTION */
+
+  /* PROJECTS SECTION */
+  .projects__item--image {
+    height: 50%;
+  }
+  /* CONTACT SECTION */
+}
+
 /* ---- FOR SMALL DEVICES ---- */
 
 @media screen and (max-width: 768px) {
@@ -832,11 +916,15 @@ img {
   /* ABOUT SECTION */
 
   .section.about {
-    padding-top: 2rem;
+    padding: 1rem;
+  }
+
+  .about__container {
+    margin: 0 auto;
   }
 
   .about__bio {
-    width: auto;
+    width: 100%;
     margin-bottom: 2rem;
   }
 
@@ -878,14 +966,44 @@ img {
     height: 45px;
   }
 
+  .splide__arrows {
+    display: none;
+  }
+
+  .splide__slide {
+    padding: 40px 10px;
+  }
+
+  .projects__item {
+    margin-left: initial;
+  }
+
   /* CONTACT SECTION */
 
   .section.contact {
     height: 95vh;
+    /* padding: 2rem; */
   }
 
-  .contact__form {
+  .contact__container {
+    display: initial;
+    /* padding: 2rem; */
+    /* display: flex;
+    flex-direction: column; */
+
+    /* justify-content: space-between; */
+    /* align-items: center; */
+  }
+
+  .contact__info {
+    height: initial;
+    padding: 0 1rem;
+  }
+
+  .contact__inputs {
+    height: 25rem;
     width: 100%;
+    padding: 0 1rem;
   }
 }
 
@@ -929,20 +1047,6 @@ img {
   .nav__menu {
     margin-left: auto;
     margin-right: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .splide__arrows {
-    display: none;
-  }
-
-  .splide__slide {
-    padding: 40px 10px;
-  }
-
-  .projects__item {
-    margin-left: initial;
   }
 }
 
