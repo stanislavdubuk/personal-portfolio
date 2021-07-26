@@ -695,50 +695,6 @@ img {
   resize: none;
 }
 
-/* .contact__form {
-  width: 30rem;
-  margin: 0 auto;
-  border: 1px solid var(--first-color-alt);
-  border-radius: 0.3rem;
-  padding: 1rem;
-}
-
-.form__fields {
-  height: 16rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-#message {
-  resize: none;
-}
-
-#name,
-#email {
-  height: 2rem;
-}
-
-#name,
-#email,
-#message {
-  padding: 5px;
-  font-family: var(--body-font);
-  font-weight: 400;
-  font-size: 12px;
-  border: none;
-  border-bottom: 1px solid var(--first-color-alt);
-  background: var(--input-color);
-}
-
-.button.contact {
-  border: none;
-  margin: 0 auto;
-  width: max-content;
-  cursor: pointer;
-} */
-
 /* -------------------------------------------- */
 /* ------------- DARK/LIGHT THEME ------------- */
 /* -------------------------------------------- */
