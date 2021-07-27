@@ -790,10 +790,6 @@ img {
     margin-top: 6rem;
   }
 
-  .home__scroll i {
-    color: var(--body-color);
-  }
-
   .codelogo {
     width: 80vw;
     margin-top: 3rem;
