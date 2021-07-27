@@ -399,7 +399,10 @@ img {
 /* ----------------- BUTTONS ------------------ */
 /* -------------------------------------------- */
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border: none;
   background-color: var(--first-color);
   color: #fff;
   padding: 1rem;
