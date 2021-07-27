@@ -639,6 +639,7 @@ img {
   padding: 10px;
   height: 22%;
   line-height: 1.8rem;
+  color: var(--title-color);
 }
 
 .projects__item--links {
@@ -1006,6 +1007,7 @@ img {
 
 .dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --first-color-lighter: var(--first-color-alt);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 25%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
