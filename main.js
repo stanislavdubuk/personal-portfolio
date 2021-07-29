@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: 2,
     rewind: true,
     breakpoints: {
-      1000: {
+      768: {
         perPage: 1,
       },
     },
