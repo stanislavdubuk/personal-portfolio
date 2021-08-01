@@ -588,6 +588,7 @@ img {
   margin-left: -3px;
   border-radius: 0.3rem;
   box-shadow: 0px 3px 15px -10px #000000;
+  overflow: hidden;
 }
 
 .splide__slide {
@@ -609,6 +610,7 @@ img {
   height: 50%;
 
   overflow: hidden;
+
   margin-bottom: 10px;
 }
 
@@ -930,7 +932,7 @@ img {
   .about__container {
     flex-direction: column;
     margin: 0 auto;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
 
   .about__bio {
@@ -964,12 +966,20 @@ img {
 
   /* PROJECTS SECTION */
 
+  .section.projects {
+    padding-bottom: 2rem;
+  }
+
   .section.projects h2 {
     margin-bottom: 0;
   }
 
   .projects__item {
     height: 24rem;
+  }
+
+  .projects__item--image img {
+    transform: scale(105%);
   }
 
   .projects__item--text {
@@ -998,6 +1008,7 @@ img {
   }
 
   .projects__responsiveImage {
+    margin-top: 3rem;
     width: 80%;
   }
 
