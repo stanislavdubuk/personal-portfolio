@@ -986,6 +986,7 @@ img {
   .projects__item--image img:hover {
     opacity: 0.9;
     transform: none;
+    padding: 0.5rem;
   }
 
   .projects__item--text {
