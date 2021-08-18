@@ -25,23 +25,24 @@
   <body>
     <!-- -------------------- HEADER -------------------- -->
     <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">Stanislav.</a>
+      <nav class="nav">
+        <a href="#" class="nav__logo">dubuk.dev</a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
               <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i> About</a
+                <i class="uil uil-user nav__icon"></i> <span>About</span></a
               >
             </li>
             <li class="nav__item">
               <a href="#projects" class="nav__link">
-                <i class="uil uil-box nav__icon"></i> Projects</a
+                <i class="uil uil-box nav__icon"></i> <span>Projects</span></a
               >
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">
-                <i class="uil uil-envelope nav__icon"></i> Contact</a
+                <i class="uil uil-envelope nav__icon"></i>
+                <span>Contact</span></a
               >
             </li>
           </ul>
@@ -77,31 +78,27 @@
       <!-- -------------------- HOME -------------------- -->
 
       <section class="section home">
-        <div class="home__wrapper">
-          <div class="home__container">
-            <div class="home__content">
-              <div class="home__data">
-                <h1 class="home__title">Hi, I am Stanislav</h1>
-                <h3 class="home__subtitle">Frontend Developer</h3>
-                <p class="home__description">
-                  I am passionate about
-                  <span class="highlighted__text">web development</span> <br />
-                  and creating pleasant
-                  <span class="highlighted__text">UX</span> alongside pixel
-                  perfect <span class="highlighted__text">UI</span>.
-                </p>
-                <a href="#contact" class="button home button--flex">
-                  Contact Me <i class="uil uil-envelope button__icon"></i>
-                </a>
-              </div>
+        <div class="hero__container">
+          <div class="hero__title">
+            <div class="hero__name">
+              Hi, <br />
+              I'm Stanislav,
             </div>
-            <div class="codelogo">
-              <img src="./assets/img/codeThinking.svg" alt="logo" />
+            <div class="hero__developer">
+              <h2>web developer.</h2>
+            </div>
+            <div class="hero__subtitle">
+              Front End Developer with a passion for perfect UI/UX.
+            </div>
+            <div class="hero__buttons">
+              <a href="#contact" class="hero__contactBtn button">
+                Contact Me <i class="uil uil-envelope button__icon"></i>
+              </a>
             </div>
           </div>
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex"
-              ><i class="uil uil-angle-down home__scroll-angle"></i
+          <div class="hero__socials">
+            <a href="https://github.com/" target="_blank"
+              ><i class="uil uil-github-alt"></i
             ></a>
           </div>
         </div>
@@ -110,10 +107,6 @@
         <div class="about__container">
           <div class="about__bio">
             <div class="about__bio--heading">
-              <!-- <h2>
-                Hello <span class="waving__hand">👋🏻</span> <br />
-                I am Stanislav
-              </h2> -->
               <span class="waving__hand">👋🏻</span>
             </div>
             <div class="about__bio--about">
@@ -157,6 +150,14 @@
                 ></i>
               </div>
               <div class="about__skills--item">
+                <h4>Sass</h4>
+                <i
+                  class="fab fa-sass skill-icon"
+                  style="color: #cd6799"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div class="about__skills--item">
                 <h4>JavaScript</h4>
                 <i
                   class="fab fa-js skill-icon"
@@ -177,14 +178,6 @@
                 <i
                   class="fab fa-git-alt skill-icon"
                   style="color: #f1502f"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <div class="about__skills--item">
-                <h4>NPM</h4>
-                <i
-                  class="fab fa-npm skill-icon"
-                  style="color: #cc3534"
                   aria-hidden="true"
                 ></i>
               </div>
@@ -364,8 +357,8 @@
             </div>
           </div>
         </div>
-        <div class="projects__responsiveImage container">
-          <img src="./assets/img/responsiveImage.svg" alt="responsiveImage" />
+        <div class="projects__responsiveImage">
+          <img src="./assets/img/spaceshipSmoke.svg" alt="responsiveImage" />
         </div>
       </section>
       <section id="contact" class="section contact">
@@ -387,9 +380,7 @@
               <div>
                 <h3 class="contact__title">Email</h3>
                 <span class="contact__subtitle"
-                  ><a href="mailto:stanislavdubuk@gmail.com"
-                    >stanislavdubuk@gmail.com</a
-                  ></span
+                  ><a>stanislavdubuk@gmail.com</a></span
                 >
               </div>
             </div>
@@ -429,6 +420,7 @@
                   cols="0"
                   rows="7"
                   class="contact__input"
+                  autocomplete="nope"
                 ></textarea>
               </div>
 

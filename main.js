@@ -28,20 +28,20 @@ const linkAction = () => {
 navLink.forEach((link) => link.addEventListener('click', linkAction));
 
 ///////////// STICKY NAV /////////////
-const headerHeight = header.getBoundingClientRect().height;
-const stickyNav = (entries) => {
-  const [entry] = entries;
-  if (mediaQuery.matches)
-    if (!entry.isIntersecting) header.classList.add('sticky');
-    else header.classList.remove('sticky');
-};
+// const headerHeight = header.getBoundingClientRect().height;
+// const stickyNav = (entries) => {
+//   const [entry] = entries;
+//   if (mediaQuery.matches)
+//     if (!entry.isIntersecting) header.classList.add('sticky');
+//     else header.classList.remove('sticky');
+// };
 
-const homeSectionObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${headerHeight}px`,
-});
-homeSectionObserver.observe(homeSection);
+// const homeSectionObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${headerHeight}px`,
+// });
+// homeSectionObserver.observe(homeSection);
 
 ///////////// DARK/LIGHT THEME /////////////
 const themeToggle = document.querySelector('#theme-toggle');
