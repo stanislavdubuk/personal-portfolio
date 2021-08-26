@@ -563,6 +563,10 @@ img {
   padding: 3rem;
 }
 
+.splide__arrows {
+  display: none;
+}
+
 .splide__arrows i {
   color: var(--body-color);
   font-size: 50px;
@@ -583,6 +587,7 @@ img {
 }
 
 .projects__item--image img {
+  height: 100%;
   transform: scale(95%);
   opacity: 0.8;
   padding-top: 2px;
@@ -599,7 +604,7 @@ img {
 .projects__item--heading {
   height: 40px;
   background: var(--first-color-lighter);
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 10px;
@@ -607,6 +612,7 @@ img {
   font-size: 15px;
   text-transform: uppercase;
   color: var(--title-color);
+  border-radius: 2px;
 }
 
 .projects__item--text {
@@ -861,6 +867,9 @@ input:-webkit-autofill:active {
   }
 
   /* ---- PROJECTS SECTION --- */
+  .splide__pagination {
+    display: none;
+  }
   /* ---- CONTACT SECTION --- */
 }
 
