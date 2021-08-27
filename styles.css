@@ -155,11 +155,6 @@ img {
   text-align: center;
 }
 
-/* .section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-} */
-
 .highlighted__text {
   color: var(--title-color);
 }
@@ -354,19 +349,14 @@ img {
   margin-bottom: 2rem;
 }
 
-.hero__socials i {
-  display: none;
-  font-size: 30px;
-  color: var(--first-color);
-}
-.hero__socials i:hover {
-  font-size: 35px;
-  color: var(--first-color-alt);
-}
-
 .hero__buttons {
   display: flex;
   align-items: center;
+}
+
+.hero__githubBtn {
+  font-size: 2rem;
+  color: var(--first-color);
 }
 
 /* -------------------------------------------- */

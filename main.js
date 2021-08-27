@@ -129,3 +129,5 @@ window.addEventListener('scroll', navHighlighter);
 //   sectionObserver.observe(section);
 //   section.classList.add('section--hidden');
 // });
+
+
